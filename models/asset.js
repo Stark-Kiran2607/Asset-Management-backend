@@ -5,5 +5,6 @@ const assetSchema = new mongoose.Schema({
     assignedTo: { type: mongoose.Schema.Types.ObjectId, ref: 'Employee' },
     status: { type: String, enum: ['available', 'assigned', 'maintenance'], default: 'available' },
     purchaseDate: { type: Date },
+    image : { type: String },
 }, { timestamps: true });
 module.exports = mongoose.model('Asset', assetSchema);
